@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFido Smart Dog Band</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo img {
+            width: 120px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        /* Home Section */
+        #home {
+            background: url('https://via.placeholder.com/1920x800/ff7f50/ffffff?text=FitFido+Smart+Dog+Band') no-repeat center center/cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #home .intro h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        #home .intro p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            background-color: #ff7f50;
+            padding: 15px 25px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #ff5722;
+        }
+
+        /* Features Section */
+        #features {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        #features h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .features-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .feature-item img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* Pricing Section */
+        #pricing {
+            background-color: #f0f0f0;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #pricing h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .pricing-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .pricing-plan {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 30%;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-plan:hover {
+            transform: translateY(-10px);
+        }
+
+        .pricing-plan h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .pricing-plan p {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .pricing-plan ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .pricing-plan ul li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .pricing-plan .cta-btn {
+            margin-top: 10px;
+        }
+
+        .pricing-plan.popular {
+            background-color: #ff7f50;
+            color: #fff;
+        }
+
+        /* Shop Section */
+        #shop {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        #shop h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .product-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-item img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .product-item h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .product-item p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .product-item .cta-btn {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="https://via.placeholder.com/120x40/333/fff?text=FitFido" alt="FitFido Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#shop">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="intro">
+            <h1>The Ultimate FitFido Smart Dog Fitness & Health Band</h1>
+            <p>Track your dog's health, fitness, sleep, and more with the most advanced wearable technology designed specifically for dogs.</p>
+            <a href="#shop" class="cta-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <h2>Key Features</h2>
+        <div class="features-container">
+            <!-- Sleep Tracking -->
+            <div class="feature-item">
+                <img src="https://via.placeholder.com/60" alt="Sleep Tracking">
+                <h3>Sleep Tracking</h3>
+                <p>Monitor your dog’s sleep patterns and identify any changes in behavior or sleep disturbances.</p>
+            </div>
+            <!-- Exercise Monitoring -->
+            <div class="feature-item">
+                <img src="https://via.placeholder.com/60" alt="Exercise Monitoring">
+                <h3>Exercise Monitoring</h3>
+                <p>Track your dog's exercise levels to ensure they're maintaining a healthy weight and avoiding behavioral issues.</p>
+            </div>
+            <!-- Fencing -->
+            <div class="feature-item">
+                <img src="https://via.placeholder.com/60" alt="Fencing">
+                <h3>Fencing</h3>
+                <p>Set up virtual fences to keep an eye on your dog’s whereabouts and make sure they stay secure.</p>
+            </div>
+            <!-- Breathing Patterns -->
+            <div class="feature-item">
+                <img src="https://via.placeholder.com/60" alt="Breathing Patterns">
+                <h3>Breathing Patterns</h3>
+                <p>Track your dog’s breathing rate to detect any irregularities that might indicate health issues.</p>
+            </div>
+            <!-- GPS Tracking -->
+            <div class="feature-item">
+                <img src="https://via.placeholder.com/60" alt="GPS Tracking">
+                <h3>GPS Tracking</h3>
+                <p>Keep track of your dog’s location in real-time for added peace of mind.</p>
+            </div>
+            <!-- Heart and Pulse Rate -->
+            <div class="feature-item">
+                <img src="https://via.placeholder.com/60" alt="Heart and Pulse Rate">
+                <h3>Heart & Pulse Rate</h3>
+                <p>Monitor your dog’s heart and pulse rate to detect potential cardiovascular problems early.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <h2>Pricing Plans</h2>
+        <div class="pricing-container">
+            <div class="pricing-plan">
+                <h3>Basic Plan</h3>
+                <p>$29.99/month</p>
+                <ul>
+                    <li>Track Activity</li>
+                    <li>Heart Rate Monitoring</li>
+                    <li>Sleep Tracking</li>
+                </ul>
+                <a href="#shop" class="cta-btn">Buy Now</a>
+            </div>
+            <div class="pricing-plan popular">
+                <h3>Premium Plan</h3>
+                <p>$49.99/month</p>
+                <ul>
+                    <li>All Features in Basic Plan</li>
+                    <li>GPS Tracking</li>
+                    <li>Exercise Monitoring</li>
+                    <li>Breathing Patterns</li>
+                </ul>
+                <a href="#shop" class="cta-btn">Buy Now</a>
+            </div>
+            <div class="pricing-plan">
+                <h3>Ultimate Plan</h3>
+                <p>$79.99/month</p>
+                <ul>
+                    <li>All Features in Premium Plan</li>
+                    <li>Fencing</li>
+                    <li>Advanced Health Insights</li>
+                </ul>
+                <a href="#shop" class="cta-btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop">
+        <h2>Shop Our Product</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="https://via.placeholder.com/200" alt="FitFido Band - Premium">
+                <h3>FitFido Band - Premium</h3>
+                <p>$249.99</p>
+                <a href="#" class="cta-btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
